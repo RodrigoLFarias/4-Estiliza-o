@@ -1,11 +1,12 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Text style={styles.textoDestaque}>Esse é o meu texto principal</Text>
+      <Text style={[styles.textoCentralizado, styles.textoGeral]}>paragrafo 1</Text>
+      <Text style={[styles.textoCentralizado, styles.textoGeral]}>paragrafo 2</Text>
+      <Text style={styles.textoGeral}>paragrafo 3</Text>
     </View>
   );
 }
@@ -13,8 +14,27 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+   
+
   },
+
+  textoCentralizado:{
+  textAlign: 'center',
+
+  },
+
+  textoDestaque:{
+    fontSize: 36,
+    fontWeight: 'bold',
+    color: 'red'
+
+  },
+
+  textoGeral: {
+    fontSize:21,
+    fontWeight:'bold'
+
+  },
+  
+  
 });
